@@ -1,0 +1,16 @@
+server:
+  port: 8866
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3308/oauth2
+    username: ${MYSQL_1_ACCOUNT:root}
+    password: ${MYSQL_1_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      maxActive: 100
+      maxWait: 20
+
+  main:
+    allow-bean-definition-overriding: true
