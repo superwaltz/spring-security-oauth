@@ -29,6 +29,7 @@ public class ClientService extends BaseService{
         client.setAccess_token_validity(60*60*2);
         client.setClient_id(UUID.randomUUID().toString());
         client.setClient_secret("secrect123");
+        client.setAuthorized_grant_types("authorization_code,password,refresh_token");
         return super.save(client);
     }
 
