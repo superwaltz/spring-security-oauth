@@ -1,14 +1,10 @@
 package com.liam.oauth2.service;
 
-import com.liam.oauth2.entity.Client;
 import com.liam.oauth2.entity.User;
 import com.liam.oauth2.repository.BaseRepository;
-import com.liam.oauth2.repository.ClientRepository;
 import com.liam.oauth2.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.UUID;
 
 /**
  * @author: liangzy
@@ -17,7 +13,7 @@ import java.util.UUID;
  */
 
 @Service
-public class UserService extends BaseService{
+public class UserService extends BaseService<User>{
 
     @Autowired
     private UserRepository userRepository;

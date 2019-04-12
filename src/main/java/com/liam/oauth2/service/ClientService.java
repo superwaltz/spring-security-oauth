@@ -14,7 +14,7 @@ import java.util.UUID;
  */
 
 @Service
-public class ClientService extends BaseService{
+public class ClientService extends BaseService<Client>{
 
     @Autowired
     private ClientRepository clientRepository;

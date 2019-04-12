@@ -1,5 +1,6 @@
 package com.liam.oauth2.repository;
 
+import com.liam.oauth2.entity.User;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -10,9 +11,9 @@ import javax.sql.DataSource;
  * @desc:
  */
 @Repository
-public class UserRepository extends BaseRepository {
+public class UserRepository extends BaseRepository<User> {
 
-    private String tableName ="u_user";
+    private static String tableName ="u_user";
 
     public UserRepository(DataSource dataSource) {
         super(dataSource);

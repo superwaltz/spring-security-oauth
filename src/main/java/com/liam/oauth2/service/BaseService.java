@@ -3,6 +3,8 @@ package com.liam.oauth2.service;
 
 import com.liam.oauth2.repository.BaseRepository;
 
+import java.util.List;
+
 /**
  * @author: liangzy
  * @date: 2019/03/15 下午3:17
@@ -28,4 +30,7 @@ public abstract class BaseService<T>  {
         return getRepository().delete(id);
     }
 
+    public List<T> list(String key, String value){
+        return getRepository().list(key,value);
+    }
 }
