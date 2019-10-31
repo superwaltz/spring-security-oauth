@@ -21,4 +21,9 @@ public class UserController {
         return "success";
     }
 
+    @GetMapping("/t-delete")
+    public String delete(){
+        userService.delete(1);
+        return "success";
+    }
 }
