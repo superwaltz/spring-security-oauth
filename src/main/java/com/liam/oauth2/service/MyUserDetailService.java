@@ -26,7 +26,6 @@ public class MyUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("===============");
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority("default");
         List<SimpleGrantedAuthority> list = new ArrayList();
         list.add(authority);

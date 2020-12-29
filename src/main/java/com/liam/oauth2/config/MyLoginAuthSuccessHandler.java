@@ -10,15 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 /**
  * 登陆成功处理，移动端登陆成功后还需做绑定操作
  */
+@Slf4j
 public class MyLoginAuthSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
     private RequestCache requestCache = new HttpSessionRequestCache();
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        System.out.println("onAuthenticationSuccess");
+        log.info("onAuthenticationSuccess");
         super.onAuthenticationSuccess(request, response, authentication);
     }
 }
